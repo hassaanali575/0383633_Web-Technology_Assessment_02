@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+:root{
+	--font-family:"Roboto", sans-serif;
+}
+
+body{
+	background: radial-gradient(#fff,#ffd6d6);
+}
+
+.header{
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	margin: 20px auto;
+}
+
+.header h1{
+	font-size: 50px;
+	color: #fff;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.header h1::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	display: block;
+	margin: 0 auto;
+	background: #ff523b;
+}
+
+.header p{
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: 35px;
+}
+
+.cont-2{
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 20px;
+
+}
+
+.abt-sec{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+
+.abt-img{
+	flex-basis: 50%;
+	min-width: 300px;
+}
+
+.abt-img img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+	padding: 50px 0;
+	transition: 0.5s ease;
+}
+
+.abt-img:hover img{
+	 transform: scale(1.2);
+}
+
+.abt-cont{
+	flex: 1;
+}
+
+.abt-cont h2{
+	font-size: 23px;
+	margin-bottom: 15px;
+	color: #333;
+}
+
+.abt-cont p{
+	font-size: 18px;
+	line-height: 1.5;
+	color: #666;
+}
+
+.abt-cont .more{
+	background: #ff523b;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 19px;
+	text-decoration: none;
+	border-radius: 25px;
+	margin-top: 15px;
+	transition: 0.3s ease;
+}
+
+.abt-cont .more:hover{
+	background-color:#563434;
+}
+
+@media screen and (max-width:768px){
+	.header{
+		padding: 0px 20px;
+	}
+
+	.header h1{
+		font-size: 36px;
+	}
+
+	.header p{
+		font-size: 17px;
+		margin-bottom: 0px;
+	}
+
+	.cont-2{
+		padding: 0px;
+	}
+
+	.abt-sec{
+		padding: 20px;
+		flex-direction: column;
+	}
+
+	.abt-img{
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+
+	.abt-cont p{
+		padding: 0px;
+		font-size: 16px;
+	}
+
+	.abt-cont .more{
+		font-size: 16px;
+		background: #ff523b;
+	}
+
+	.abt-cont .more:hover{
+	background-color:#563434;
+}
+}
+
+@media only screen and (max-width:800px){
+	nav ul{
+		position: absolute;
+		top: 70px;
+		left: 0;
+		background: #333;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+	}
+
+	nav ul li{
+		display: block;
+		margin-right: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	nav ul li a{
+		color: #fff;
+	}
+
+	.iconic-menu{
+		display: block;
+		cursor: pointer;
+	}
+
+
+}
+
+
+
+@media only screen and (max-width:600px){
+	.grid{
+		text-align: center;
+
+	}
+
+	.column, .column-1, .column-2,.column-3{
+flex-basis: 100%;
+	}
+}
