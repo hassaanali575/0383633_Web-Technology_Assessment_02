@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Red Store|Ecommerce website</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+
+</head>
+<body>
+	<div class="head">
+	<div class="cont-1">
+	<div class="navigation">
+<div class="img-1">
+	<img src="../images/img-80.png">
+</div>
+<nav>
+<ul id="Items">
+	<li><a href="../html/index.html">Home</a></li>
+	<li><a href="../html/products.html">Product</a></li>
+	<li><a href="../html/about.html">About</a></li>
+	<li><a href="../html/contact.html">Contact</a></li>
+	<li><a href="../html/login.html">Login</a></li>
+	
+</ul>
+</nav>	
+<img src="../images/cart.png" width="30px" height="30px">
+<img src="../images/menu.png" class="iconic-menu" onclick="menutoggle() ">
+</div>	
+</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="acc-page">
+	<div class="cont-1">
+		<div class="grid">
+			<div class="column">
+					<img src="../images/img-67.png" width="100%">
+			</div>
+
+			<div class="column">
+				<div class="form-cont">
+				<div class="frm-button">
+				<span onclick="Login()">Login</span>	 
+			
+				<hr id="Indicate"> 
+			</div>
+				<form id="log" > 
+					<input type="text" name="username" id="username" placeholder="Username">
+					<input type="password" id="password" name="password" placeholder="Password">
+					<button type="submit" id="Login" class="button">Login</button>
+					<br>
+					<a href="signup.html">Don't have account?</a>
+				</form>
+
+
+
+			</div>
+				
+
+
+</div>
+</div>
+</div>
+</div>
+<div class="foot">
+	<div class="cont-1">
+		<div class="grid">
+			<div class="foot-col-1">
+				<h3>Download Our App</h3>
+				<p>Download App For Android and ios Mobile Phone</p>
+				<div class="application-image">
+				<img src="../images/play-store.png">
+				<img src="../images/app-store.png">
+				</div>
+			</div> 
+			<div class="foot-col-2">
+			<img src="../images/img-80.png">
+				<p>Our Purpose Is To Sustainably Make the Pleasure and <br>Benefits of Sports Accessible to the Many.</p>
+			</div> 
+			<div class="foot-col-3">
+				<h3>Useful Links</h3>
+				<ul>
+					<li>Coupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div> 
+			<div class="foot-col-4">
+	
+				<h3>Follow Us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>Youtube</li>
+				</ul>
+			</div> 
+		</div>
+		<hr>
+		<p class="right">Copyright 2020 -</p>
+	</div>
+</div>
+
+<script>
+	var Items = document.getElementById("Items");
+	Items.style.maxHeight= "0px";
+	function menutoggle(){
+		if(Items.style.maxHeight == "0px"){
+		Items.style.maxHeight= "200px";	
+		}
+
+		else{
+		Items.style.maxHeight= "0px";	
+		}
+	}
+</script>
+
+<script>
+	var log = document.getElementById("log");
+	var register = document.getElementById("register");
+	var  Indicate = document.getElementById('Indicate');
+
+	function Register(){
+		register.style.transform = "translateX(0px)";
+		log.style.transform = "translateX(0px)";
+		Indicate.style.transform = "translateX(100px)";
+
+	}
+
+
+	function Login(){
+		register.style.transform = "translateX(300px)";
+		log.style.transform = "translateX(300px)";
+			Indicate.style.transform = "translateX(0px)";
+	}
+
+	document.getElementById("Login").addEventListener("click",RegisterUser);
+
+
+function RegisterUser(e)
+ {
+   e.preventDefault();
+
+
+
+
+var username=document.getElementById("username").value;
+var password=document.getElementById("password").value;
+
+
+if(username=="" || password=="" )
+{
+   alert("Please Fill all fields");
+}
+
+else
+{
+   
+	   let mydata={
+		   username:username,
+		   password:password
+	   };
+
+	   let obj=JSON.stringify(mydata);
+
+
+	   let xhr=new XMLHttpRequest();
+
+	   xhr.open("POST","http://localhost/Ecommerce/php/LoginHandler.php",true);
+
+	   
+
+	   xhr.onload=()=>
+	   {
+		   if(xhr.status==200)
+	   {
+			
+alert(xhr.responseText);
+			   window.location.href="login.html";
+	   
+
+	   }
+	   else
+	   {
+		   alert("Error Ocuur");
+		   
+	   }
+	   }
+
+	   xhr.send(obj);
+}
+
+
+ }
+</script>

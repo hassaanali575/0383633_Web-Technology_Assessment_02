@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Page</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div class="cont-1">
+	<div class="navigation">
+<div class="img-1">
+	<img src="../images/img-80.png">
+</div>
+<nav>
+<ul id="Items">
+	<li><a href="../html/index.html">Home</a></li>
+	<li><a href="../html/products.html">Product</a></li>
+	<li><a href="../html/about.html">About</a></li>
+	<li><a href="../html/contact.html">Contact</a></li>
+	<li><a href="../html/login.html">Login</a></li>
+	
+</ul>
+</nav>	
+<img src="../images/cart.png" width="30px" height="30px">
+<img src="../images/menu.png" class="iconic-menu" onclick="menutoggle() ">
+</div>	
+<div class="header">
+<h1>About Us</h1>	
+	<p>Success isn't always about greatness.It's about consistency.Consistent hard work gains success.Greatness will come.</p>
+	
+</div>
+
+<div class="cont-2">
+	<section class="abt-sec">
+		<div class="abt-img">
+			<img src="../images/img-67.png" width="100%">
+		</div>
+		<div class="abt-cont">   
+			<h2>You can buy Online Products</h2>
+			<p>Founded by Hassaan Ali, Shopnow was born out of a passion for Ecommerce. Frustrated by the lack of specific products or services, Hassaan Ali set out to create a one-stop destination where individuals could discover, explore, and indulge in their desires.</p>
+			<a href="" class="more">Read More</a>
+		</div>
+	</section>
+</div>
+</div>
+<div class="foot">
+	<div class="cont-1">
+		<div class="grid">
+			<div class="foot-col-1">
+				<h3>Download Our App</h3>
+				<p>Download App For Android and ios Mobile Phone</p>
+				<div class="application-image">
+				<img src="../images/play-store.png">
+				<img src="../images/app-store.png">
+				</div>
+			</div> 
+			<div class="foot-col-2">
+			<img src="../images/img-80.png">
+				<p>Our Purpose Is To Sustainably Make the Pleasure and <br>Benefits of Sports Accessible to the Many.</p>
+			</div> 
+			<div class="foot-col-3">
+				<h3>Useful Links</h3>
+				<ul>
+					<li>Coupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div> 
+			<div class="foot-col-4">
+	
+				<h3>Follow Us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>Youtube</li>
+				</ul>
+			</div> 
+		</div>
+		<hr>
+		<p class="right">Copyright 2020 -</p>
+	</div>
+</div>
+
+<script>
+	var Items = document.getElementById("Items");
+	Items.style.maxHeight= "0px";
+	function menutoggle(){
+		if(Items.style.maxHeight == "0px"){
+		Items.style.maxHeight= "200px";	
+		}
+
+		else{
+		Items.style.maxHeight= "0px";	
+		}
+	}
+</script>
+</body>
+</html>
